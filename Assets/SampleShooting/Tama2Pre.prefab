@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6049415608399235121}
   - component: {fileID: 2187716972611628570}
   - component: {fileID: 2944529461226424351}
+  - component: {fileID: -355713927287690807}
   m_Layer: 10
   m_Name: Tama2Pre
   m_TagString: Bullet
@@ -113,3 +114,24 @@ CircleCollider2D:
   m_Offset: {x: -0.03012452, y: 0}
   serializedVersion: 2
   m_Radius: 0.5507227
+--- !u!50 &-355713927287690807
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092689533751832409}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
