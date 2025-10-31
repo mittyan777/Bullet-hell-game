@@ -1608,11 +1608,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2036702139}
   - component: {fileID: 2036702138}
-  - component: {fileID: 2036702137}
   - component: {fileID: 2036702140}
   - component: {fileID: 2036702141}
   - component: {fileID: 2036702142}
-  - component: {fileID: 2036702143}
   - component: {fileID: 2036702144}
   m_Layer: 0
   m_Name: sirou
@@ -1621,20 +1619,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2036702137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036702136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61bb9b9ea12140a4f8601cd57f523303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotBullet: {fileID: 2887205727328534662, guid: a770f65561aeccd4daf67f19d3de73e4,
-    type: 3}
 --- !u!212 &2036702138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1761,20 +1745,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2036702143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036702136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b4e64338f434248b20c07acfa63bda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotBullet: {fileID: 3092689533751832409, guid: 94e2fcc72fe3feb4793534f8448c3ed0,
-    type: 3}
 --- !u!95 &2036702144
 Animator:
   serializedVersion: 3

@@ -20,7 +20,7 @@ public class Enemy01 : MonoBehaviour
     [SerializeField] float movespeed = 0.25f;
     [SerializeField] Transform movepos1;
     [SerializeField] Transform movepos2;
-    private float t = 0f;
+    private float t = 0.5f;
     private bool forward = true;
 
     void Start()
