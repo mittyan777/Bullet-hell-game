@@ -46,6 +46,8 @@ public class GameSceneManager : MonoBehaviour
     }
     public void Set_StageBossDead() { StageBossDead = true; }
 
+    public bool Is_StageCleared() { return StageBossDead; }
+
     IEnumerator SceneLoad(string sceneName)
     {
         yield return new WaitForSeconds(1.0f);

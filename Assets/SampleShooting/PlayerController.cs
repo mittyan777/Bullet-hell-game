@@ -80,6 +80,10 @@ public class PlayerController : MonoBehaviour
             move.x += 1;
             GetComponent<SpriteRenderer>().sprite = Playe_Sprite[2];
         }
+        if (move == Vector2.zero)
+        {
+            GetComponent<SpriteRenderer>().sprite = Playe_Sprite[0];
+        }
 
         move = move.normalized * playerSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + move);
@@ -123,8 +127,9 @@ public class PlayerController : MonoBehaviour
     //プレイヤーの当たり判定に当たった時の処理
     void OnCollisionEnter2D(Collision2D collision)
     {
+        bool StageCleared = gameSceneManager.Is_StageCleared();
         //タグで絞っている//
-        if (collision.gameObject.tag == "Bullet"&&Is_noHitTime is false)
+        if (collision.gameObject.tag == "Bullet" && !Is_noHitTime && !StageCleared) 
         {
             playerSource.PlayOneShot(DamageSound);
             HP -= 1;
