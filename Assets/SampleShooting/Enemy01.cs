@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Enemy01 : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Enemy01 : MonoBehaviour
     int hp = 50; // HPを管理する変数を宣言
     [SerializeField] int Section2HP;
     [SerializeField] int Section3HP;
-    [SerializeField]Slider hpSlider;
+    [SerializeField] UnityEngine.UI.Slider hpSlider;
     int SectionNum = 1;
 
     [Space(2)][Header("弾の種類")]
@@ -76,6 +77,7 @@ public class Enemy01 : MonoBehaviour
 
             if (hp <= 0)    // HPが0になった場合
             {
+                hpSlider.value = 0;
                 gameSceneManager.Set_StageBossDead();
                 this.gameObject.SetActive(false);    // 敵オブジェクトを非表示にする
             }
