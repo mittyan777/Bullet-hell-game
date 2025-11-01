@@ -7,9 +7,10 @@ public class Enemy01 : MonoBehaviour
 {
     [SerializeField] GameSceneManager gameSceneManager;
 
-    int hp = 50; // HPを管理する変数を宣言
+    [SerializeField]float hp; // HPを管理する変数を宣言
     [SerializeField] int Section2HP;
     [SerializeField] int Section3HP;
+    [SerializeField] int Section4HP;
     [SerializeField] UnityEngine.UI.Slider hpSlider;
     int SectionNum = 1;
 
@@ -17,6 +18,7 @@ public class Enemy01 : MonoBehaviour
     [SerializeField] GameObject BulletType1;
     [SerializeField] GameObject BulletType2;
     [SerializeField] GameObject BulletType3;
+    [SerializeField] GameObject BulletType4;
 
     [SerializeField] float movespeed = 0.25f;
     [SerializeField] Transform movepos1;
@@ -29,6 +31,7 @@ public class Enemy01 : MonoBehaviour
         BulletType1.SetActive(true);
         BulletType2.SetActive(false);
         BulletType3.SetActive(false);
+        BulletType4.SetActive(false);
     }
 
     void Update()
@@ -68,12 +71,16 @@ public class Enemy01 : MonoBehaviour
             BulletType2.SetActive(true);
             SectionNum = 2;
         }
+        else if (hp <= Section4HP && SectionNum is 3)
+        {
+            BulletType4.SetActive(true);
+        }
     }
     void OnTriggerEnter2D(Collider2D collision) // 当たり判定のあるオブジェクトと当たった場合
     {
-        if (collision.gameObject.name == "playerBullet(Clone)")   // 当たったオブジェクトがプレイヤーの弾の場合
+        if (collision.gameObject.name == "PlayerBullet")   // 当たったオブジェクトがプレイヤーの弾の場合
         {
-            hp--;   // HPを1減らす処理
+            hp -= 0.1f;   // HPを1減らす処理
 
             if (hp <= 0)    // HPが0になった場合
             {

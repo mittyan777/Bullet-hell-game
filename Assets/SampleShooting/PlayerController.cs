@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         //    GetComponent<SpriteRenderer>().sprite = Playe_Sprite[2];//右用spriteに変更
         //}
         //弾発射
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             Instantiate(playerBullet, transform.position, Quaternion.identity);
             playerSource.PlayOneShot(ShotSound);
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
         //タグで絞っている//
         if (collision.gameObject.tag == "Bullet" && !Is_noHitTime && !StageCleared) 
         {
-            playerSource.PlayOneShot(DamageSound);
+            playerSource.PlayOneShot(DamageSound,0.1f);
             HP -= 1;
             Is_noHitTime = true;
             Destroy(collision.gameObject);
