@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("音関係")]
     [SerializeField] AudioClip ShotSound;//弾発射音
     [SerializeField] AudioClip DamageSound;//被弾音
+    [SerializeField] float SoundVolume;
     AudioSource playerSource;
 
     void Start()
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             Instantiate(playerBullet, transform.position, Quaternion.identity);
-            playerSource.PlayOneShot(ShotSound);
+            playerSource.PlayOneShot(ShotSound, SoundVolume);
         }
 
         //移動
@@ -131,7 +132,7 @@ public class PlayerController : MonoBehaviour
         //タグで絞っている//
         if (collision.gameObject.tag == "Bullet" && !Is_noHitTime && !StageCleared) 
         {
-            playerSource.PlayOneShot(DamageSound,0.1f);
+            playerSource.PlayOneShot(DamageSound, SoundVolume);
             HP -= 1;
             Is_noHitTime = true;
             Destroy(collision.gameObject);

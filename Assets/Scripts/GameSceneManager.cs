@@ -38,6 +38,14 @@ public class GameSceneManager : MonoBehaviour
         {
             StartCoroutine(SceneLoad(GameOverScene));
         }
+        if(Player != null)
+        {
+            GameObject.Find("BGM").GetComponent<AudioSource>().volume = 0.5f;
+        }
+        else
+        {
+            GameObject.Find("BGM").GetComponent<AudioSource>().volume = 0.1f;
+        }
     }
 
     public void Set_PlayerDead() {  

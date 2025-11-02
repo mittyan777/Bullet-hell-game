@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &357560653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +169,7 @@ MonoBehaviour:
     type: 3}
   ShotSound: {fileID: 8300000, guid: ada62abe34ab99f4cb55f09c1b47c075, type: 3}
   DamageSound: {fileID: 8300000, guid: 46b5b2ddd05a6164faf69f9546fccc75, type: 3}
+  SoundVolume: 0.05
 --- !u!212 &357560654
 SpriteRenderer:
   m_ObjectHideFlags: 0
